@@ -19,12 +19,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: github/command@v2.0.0
-        id: command
-        with:
-          command: ".ping"
-          allowed_contexts: pull_request
-
       - name: testing-exit-code
         id: e2eExitCode
         run: |
@@ -46,7 +40,11 @@ jobs:
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: '⚰️ E2E Tests Failed :('
+              body: `
+              ![](https://www.cypress.io/_astro/cypress-logo.D87396b0.svg)
+              
+              <b>E2E Test Failed🧪 🔴</b>`
+              `
             })
 
   pass:
@@ -63,5 +61,9 @@ jobs:
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: '☕ E2E Tests passed!! ${{steps.e2eExitCode.outputs.outcome}}'
+              body: `
+              ![](https://www.cypress.io/_astro/cypress-logo.D87396b0.svg)
+
+              <b>E2E Test Passed 🧪 🟢</b>`
+              `
             })
