@@ -30,8 +30,7 @@ jobs:
         run: |
           set +e
           exit 1
-          echo "exitcode=$?" >> $GITHUB_OUTPUT
-          echo "::set-output name=outcome::$?"
+          echo "outcome=$?" >> $GITHUB_OUTPUT
 
   fail:
     runs-on: ubuntu-latest
