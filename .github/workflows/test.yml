@@ -42,6 +42,8 @@ jobs:
               ![](https://www.cypress.io/_astro/cypress-logo.D87396b0.svg)
               
               <b>E2E Test Failed🧪 🔴</b>
+
+              See run [HERE](https://github.com/danielth-uk/gh-testing/actions/runs/${{github.run_id}})
               `
             })
 
