@@ -43,7 +43,7 @@ jobs:
               body: `
               ![](https://www.cypress.io/_astro/cypress-logo.D87396b0.svg)
               
-              <b>E2E Test Failed🧪 🔴</b>`
+              <b>E2E Test Failed🧪 🔴</b>
               `
             })
 
@@ -64,6 +64,6 @@ jobs:
               body: `
               ![](https://www.cypress.io/_astro/cypress-logo.D87396b0.svg)
 
-              <b>E2E Test Passed 🧪 🟢</b>`
+              <b>E2E Test Passed 🧪 🟢</b>
               `
             })
