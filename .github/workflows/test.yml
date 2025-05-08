@@ -22,9 +22,7 @@ jobs:
       - name: testing-exit-code
         id: e2eExitCode
         run: |
-          set +e
-          exit 0
-          echo "outcome=$?" >> $GITHUB_OUTPUT
+          exit 1
 
   fail:
     needs: e2e
