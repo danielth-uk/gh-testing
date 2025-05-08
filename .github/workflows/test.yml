@@ -50,11 +50,12 @@ jobs:
             })
 
   pass:
+    needs: e2e
     runs-on: ubuntu-latest
     steps:
       - name: If e2e Passes
         uses: actions/github-script@v7
-        if: steps.e2eExitCode.outputs.outcome == '0'
+        if: needs.e2e.outputs.e2ePassed == '0'
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
