@@ -29,9 +29,9 @@ jobs:
         id: e2eExitCode
         run: |
           set +e
-          exit 0
+          exit 1
           echo "exitcode=$?" >> $GITHUB_OUTPUT
-          echo "::set-output name=outcome::exitcode=$?"
+          echo "::set-output name=outcome::$?"
 
   fail:
     runs-on: ubuntu-latest
